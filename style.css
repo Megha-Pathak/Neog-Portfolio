@@ -6,6 +6,7 @@
   --background: #020c1b;
   --slate: #ccd6f6;
   --white: #e6f1ff;
+  --background-second: #83bee7;
   margin: 0;
 }
 
@@ -20,11 +21,6 @@ nav {
   padding: 1rem 0.5rem;
   background-color: transparent;
   color: var(--theme);
-}
-
-.name {
-  color: var(--slate);
-  margin-left: 3rem;
 }
 
 nav ul,
@@ -45,6 +41,11 @@ footer a {
   font-weight: bold;
 }
 
+.white {
+  color: var(--white);
+}
+
+.theme,
 nav a {
   color: var(--theme);
 }
@@ -71,7 +72,8 @@ main {
 }
 
 .hero-gif {
-  width: 35vw;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
 }
 
@@ -88,20 +90,15 @@ main {
   font-weight: bold;
 }
 
-.hero-head {
-  font-size: 15px;
-  color: var(--theme);
-}
-
-.text-section p {
+.hero-text p {
   margin: auto;
 }
 
 .button {
-  border-color: var(--primary-blue);
-  color: var(--primary-blue);
+  border-color: var(--theme);
+  color: var(--theme);
   text-decoration: none;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 0.5rem 1.2rem;
   border-style: solid;
   font-size: small;
@@ -109,8 +106,8 @@ main {
 }
 
 .button:hover {
-  background-color: var(--primary-blue);
-  color: var(--background-dark);
+  background-color: var(--theme);
+  color: var(--background);
 }
 
 section {
@@ -123,10 +120,21 @@ section {
 
 section h1 {
   font-size: 3em;
+  color: var(--slate);
 }
 
-.section-dark {
-  background-color: var(--backgrounf-light);
+.section-secondary h1 {
+  font-size: 3em;
+  color: var(--background);
+}
+
+.section-secondary {
+  background-color: var(--background-second);
+  color: var(--background);
+}
+.section-secondary .button {
+  border-color: var(--background);
+  color: var(--background);
 }
 
 section p {
@@ -142,62 +150,15 @@ section p {
   width: 100%;
 }
 
-.contact-info {
-  text-align: left;
-  border-radius: 7px;
-}
-
-.contact-info a {
-  text-decoration: none;
-  color: var(--grey);
-}
-
-.contact-section label {
-  display: block;
-  height: max-content;
-  text-align: left;
-}
-
-.card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-container a,
 .footer-container a {
   text-decoration: none;
-  color: var(--primary-blue);
+  color: var(--theme);
 }
 
 nav a:hover,
 .card-container a:hover,
 .footer-container.footer-container a:hover {
   text-decoration: underline;
-}
-
-.card-img {
-  width: 20rem;
-}
-
-.card-img img {
-  width: 100%;
-}
-
-.card-body {
-  width: 40rem;
-  padding: 2rem 3rem;
-}
-
-.card-body h2 {
-  text-align: left;
-}
-.card-body p {
-  padding: 0;
-  text-align: justify;
 }
 
 .button-container {
@@ -210,10 +171,6 @@ nav a:hover,
   margin: 0;
 }
 
-.project .button2 {
-  margin-left: 1rem;
-}
-
 .footer-container {
   display: block;
   padding: 1rem 2rem;
@@ -223,22 +180,27 @@ nav a:hover,
 footer {
   margin: 0;
   text-align: center;
-  border-color: var(--primary-blue);
+  border-color: var(--background);
   border-style: solid;
   padding: 1rem 0.5rem;
-  color: var(--theme);
+  background-color: var(--background-second);
+  color: var(--background);
 }
 
 @media (max-width: 660px) {
-  .hero-text .hero-head p {
-    font-size: small;
+  .hero-text p {
+    font-size: medium;
     margin: 30% auto 5% auto;
   }
   section h1 {
     font-size: 2em;
   }
 
-  .hero-text .hero-head {
+  header {
+    align-items: center;
+  }
+
+  .hero-text {
     justify-content: center;
   }
 }
